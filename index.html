@@ -5,135 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diocese of Cubao - Home</title>
     
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-[#2c2c2c] text-white text-[10px] uppercase tracking-[0.2em] py-2 px-6 flex justify-between items-center">
+    <div class="top-bar">
         <div>Roman Catholic Church of the Philippines</div>
-        <div class="space-x-4 flex">
-            <a href="#" class="hover:text-[#c5a059] transition">English</a>
-            <a href="#" class="hover:text-[#c5a059] transition">Tagalog</a>
-            <a href="#" class="hover:text-[#c5a059] transition">Latin</a>
+        <div class="lang-links">
+            <a href="#" class="transition">English</a>
+            <a href="#" class="transition">Tagalog</a>
+            <a href="#" class="transition">Latin</a>
         </div>
     </div>
 
-    <header class="bg-white border-b-4 border-vatican py-10 shadow-sm">
-        <div class="max-w-6xl mx-auto text-center">
-            <h1 class="text-6xl font-bold vatican-red-text tracking-tighter">The Roman Catholic Diocese of Cubao</h1>
-            <p class="text-xs uppercase tracking-[0.4em] mt-3 vatican-gold-text font-bold">Archdiocese of Manila</p>
+    <header>
+        <div class="container-wide">
+            <h1 class="vatican-red-text">The Roman Catholic Diocese of Cubao</h1>
+            <p class="vatican-gold-text sub-header">Archdiocese of Manila</p>
         </div>
     </header>
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <ul class="flex justify-center space-x-12 py-4 text-[11px] uppercase font-bold tracking-widest text-gray-500">
-            <li class="hover:vatican-red-text cursor-pointer transition">Parishes</li>
-            <li class="hover:vatican-red-text cursor-pointer transition">Diocese</li>
-            <li class="hover:vatican-red-text cursor-pointer transition">Mass Times</li>
-            <li class="hover:vatican-red-text cursor-pointer transition">Sacraments</li>
+    <nav class="sticky-nav">
+        <ul class="nav-links">
+            <li class="transition">Parishes</li>
+            <li class="transition">Diocese</li>
+            <li class="transition">Mass Times</li>
+            <li class="transition">Sacraments</li>
         </ul>
     </nav>
 
-    <section class="max-w-4xl mx-auto mt-16 px-6">
-        <div class="search-container">
-            <div class="search-inner">
-                <h2 class="text-2xl mb-6 italic serif">Search the Ecclesiastical Directory</h2>
-                <div class="max-w-xl mx-auto">
-                    <input type="text" placeholder="Search by Parish, City, or Patron Saint..." class="search-input">
-                    <button class="mt-6 bg-[#c5a059] text-white px-10 py-3 uppercase text-[10px] font-bold tracking-[0.2em] hover:bg-[#b08d4a] transition shadow-lg">
-                        Search Directory
-                    </button>
+    <section class="search-section">
+        <div class="container-medium">
+            <div class="search-container">
+                <div class="search-inner">
+                    <h2 class="serif-italic">Search the Ecclesiastical Directory</h2>
+                    <div class="container-small">
+                        <input type="text" placeholder="Search by Parish, City, or Patron Saint..." class="search-input">
+                        <button class="btn-search transition">
+                            Search Directory
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="max-w-6xl mx-auto mt-20 px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+    <main class="container-wide main-content">
+        <div class="layout-grid">
             
-            <div class="md:col-span-8">
-                <h3 class="text-[11px] uppercase font-bold vatican-gold-text border-b border-vatican mb-8 pb-2 tracking-widest">Featured Parish</h3>
-                <div class="group cursor-pointer">
-                    <div class="aspect-video bg-gray-200 overflow-hidden mb-6 shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1548625361-195fe5772323?q=80&w=1000" alt="Manila Cathedral" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+            <!-- Main Content -->
+            <div class="content-left">
+                <h3 class="section-label">Featured Parish</h3>
+                <div class="featured-card">
+                    <div class="img-frame">
+                        <img src="https://images.unsplash.com/photo-1548625361-195fe5772323?q=80&w=1000" alt="Manila Cathedral" class="transition">
                     </div>
-                    <h2 class="text-4xl font-bold hover:vatican-red-text transition-colors duration-300">Minor Basilica of the Immaculate Conception</h2>
-                    <p class="mt-4 text-gray-600 leading-relaxed italic text-lg">The Metropolitan Cathedral-Basilica, situated in the heart of Intramuros, Manila, serves as the seat of the Archbishop of Manila...</p>
+                    <h2 class="card-title transition">Minor Basilica of the Immaculate Conception</h2>
+                    <p class="card-excerpt">The Metropolitan Cathedral-Basilica, situated in the heart of Intramuros, Manila, serves as the seat of the Archbishop of Manila...</p>
                 </div>
             </div>
 
-            <div class="md:col-span-4">
-                <h3 class="text-[11px] uppercase font-bold vatican-gold-text border-b border-vatican mb-8 pb-2 tracking-widest">Dioceses</h3>
-                <ul class="space-y-6">
-                    <li class="sidebar-item cursor-pointer group">
-                        <span class="text-[9px] text-gray-400 block tracking-widest uppercase mb-1">Luzon</span>
-                        <span class="font-bold text-gray-800 group-hover:vatican-red-text">Archdiocese of Manila</span>
+            <!-- Sidebar -->
+            <div class="content-right">
+                <h3 class="section-label">Dioceses</h3>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item transition">
+                        <span class="region-tag">Luzon</span>
+                        <span class="location-name">Archdiocese of Manila</span>
                     </li>
-                    <li class="sidebar-item cursor-pointer group">
-                        <span class="text-[9px] text-gray-400 block tracking-widest uppercase mb-1">Visayas</span>
-                        <span class="font-bold text-gray-800 group-hover:vatican-red-text">Archdiocese of Cebu</span>
+                    <li class="sidebar-item transition">
+                        <span class="region-tag">Visayas</span>
+                        <span class="location-name">Archdiocese of Cebu</span>
                     </li>
-                    <li class="sidebar-item cursor-pointer group">
-                        <span class="text-[9px] text-gray-400 block tracking-widest uppercase mb-1">Mindanao</span>
-                        <span class="font-bold text-gray-800 group-hover:vatican-red-text">Archdiocese of Davao</span>
+                    <li class="sidebar-item transition">
+                        <span class="region-tag">Mindanao</span>
+                        <span class="location-name">Archdiocese of Davao</span>
                     </li>
                 </ul>
 
-                <div class="mt-16 p-8 bg-[#2c2c2c] text-white shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-2 opacity-10 text-6xl serif">✝</div>
-                    <h4 class="serif text-2xl border-b border-[#c5a059] mb-4 pb-2">Ecclesiastical Provinces</h4>
-                    <p class="text-xs leading-relaxed text-gray-400 uppercase tracking-widest font-light">Browse parishes according to the hierarchical structure of the Church.</p>
+                <div class="promo-box">
+                    <div class="cross-icon">✝</div>
+                    <h4 class="serif">Ecclesiastical Provinces</h4>
+                    <p class="promo-text">Browse parishes according to the hierarchical structure of the Church.</p>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="border-t-4 border-vatican bg-[#1a1a1a] py-20 px-8 text-white">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-16">
-            
-            <div class="flex flex-col md:flex-row items-center gap-10 md:w-1/2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Coat_of_arms_of_Elias_Lumayog_Ayuban_Jr.svg/1280px-Coat_of_arms_of_Elias_Lumayog_Ayuban_Jr.svg.png" 
-                    class="h-40 w-auto filter">
-                <div class="text-center md:text-left border-t-2 md:border-t-0 md:border-l-2 border-[#c5a059]/30 pt-6 md:pt-0 md:pl-10">
-                    <h4 class="serif text-3xl font-bold vatican-gold-text tracking-widest uppercase">Diocese of Cubao</h4>
-                    <p class="text-[10px] uppercase tracking-[0.4em] text-gray-500 mt-2 font-bold">Pontifex Maximus</p>
-                    <p class="italic text-base text-white/80 mt-4 font-semibold border-b border-[#c5a059] inline-block pb-1 italic">"In Illo Uno Unum"</p>
-                    <p class="text-[10px] text-gray-500 mt-3 uppercase tracking-[0.2em] italic font-light">267th Successor of Peter</p>
+    <footer>
+        <div class="container-wide">
+            <div class="footer-top">
+                
+                <div class="footer-brand">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Coat_of_arms_of_Elias_Lumayog_Ayuban_Jr.svg/1280px-Coat_of_arms_of_Elias_Lumayog_Ayuban_Jr.svg.png" 
+                        class="coat-of-arms">
+                    <div class="brand-details">
+                        <h4 class="vatican-gold-text footer-title">Diocese of Cubao</h4>
+                        <p class="pontifex-tag">Pontifex Maximus</p>
+                        <p class="latin-motto">"In Illo Uno Unum"</p>
+                        <p class="successor-tag">267th Successor of Peter</p>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <h5 class="vatican-gold-text col-title">The Holy See</h5>
+                        <ul class="footer-links">
+                            <li class="transition">The Magisterium</li>
+                            <li class="transition">Vatican News</li>
+                            <li class="transition">Apostolic Palace</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="vatican-gold-text col-title">Domus Dei PH</h5>
+                        <ul class="footer-links">
+                            <li class="transition">CBCP Online</li>
+                            <li class="transition">Diocesan Registry</li>
+                            <li class="transition">Privacy Policy</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="md:w-1/2 grid grid-cols-2 gap-16 w-full text-right">
-                <div>
-                    <h5 class="text-[11px] font-bold uppercase tracking-[0.2em] vatican-gold-text mb-6 border-b border-white/5 pb-2">The Holy See</h5>
-                    <ul class="text-xs space-y-4 text-gray-400 font-medium tracking-wide">
-                        <li class="hover:text-[#c5a059] cursor-pointer transition">The Magisterium</li>
-                        <li class="hover:text-[#c5a059] cursor-pointer transition">Vatican News</li>
-                        <li class="hover:text-[#c5a059] cursor-pointer transition">Apostolic Palace</li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-[11px] font-bold uppercase tracking-[0.2em] vatican-gold-text mb-6 border-b border-white/5 pb-2">Domus Dei PH</h5>
-                    <ul class="text-xs space-y-4 text-gray-400 font-medium tracking-wide">
-                        <li class="hover:text-[#c5a059] cursor-pointer transition">CBCP Online</li>
-                        <li class="hover:text-[#c5a059] cursor-pointer transition">Diocesan Registry</li>
-                        <li class="hover:text-[#c5a059] cursor-pointer transition">Privacy Policy</li>
-                    </ul>
-                </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Gian Carlo S. Victorino</p>
+                <p class="ad-limina">Ad Limina Apostolorum - Omnia ad maiorem Dei gloriam</p>
             </div>
-        </div>
-
-        <div class="max-w-6xl mx-auto mt-20 pt-10 border-t border-white/5 text-center">
-            <p class="text-[10px] text-gray-600 uppercase tracking-[0.6em] font-bold">
-                &copy; 2026 Gian Carlo S. Victorino
-            </p>
-            <p class="text-[8px] text-gray-700 uppercase tracking-[0.3em] mt-4 font-light italic">
-                Ad Limina Apostolorum - Omnia ad maiorem Dei gloriam
-            </p>
         </div>
     </footer>
 
